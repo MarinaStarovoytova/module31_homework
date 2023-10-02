@@ -1,0 +1,230 @@
+.container-kanban {
+  width: 100%;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  flex-direction: column;
+}
+
+.kanban-heading,
+.kanban-footer-task {
+  background-color: #0067A3;
+  color: #FFFFFF;
+  padding: 0 14px;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tasks {
+  display: flex;
+  justify-content: space-between;
+  width: 333px;
+}
+
+.kanban-heading-text {
+  font-size: 28px;
+  line-height: 33px;
+  margin-bottom: 0;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+}
+
+.name-user {
+  margin-right: 15px;
+}
+
+.img-user {
+  width: 40px;
+  height: 40px;
+}
+
+.kanban-board {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 25px 14px;
+  height: 700px;
+  background-color: #0079bf;
+}
+
+.kanban-block {
+  padding: 12px;
+  width: 282px;
+  min-height: 120px;
+  max-height: 538px;
+  background: #EBECF0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.button-add-backlog,
+.button-add-ready,
+.button-add-progress,
+.button-add-finished,
+.button-delete {
+  color: #5E6C84;
+  text-align: left;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 8px;
+  width: 246px;
+  padding: 5px;
+}
+
+.dropdown-by-id .button-delete {
+
+  width: 48px;
+}
+
+.input-task-backlog,
+.input-task-ready,
+.input-task-progress,
+.input-task-finished {
+  border: 0;
+  border-radius: 10px;
+  padding: 5px;
+  width: 246px;
+}
+
+.input-task-backlog:focus,
+.input-task-ready:focus,
+.input-task-progress:focus,
+.input-task-finished:focus {
+  outline: none;
+  border: 2px solid #5E6C84;
+}
+
+.dropdown-task-backlog,
+.dropdown-task-ready,
+.dropdown-task-progress,
+.dropdown-task-finished {
+  list-style: none;
+  padding-left: 0;
+  margin: 22px 0;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scrollbar-color: #CBCBCB #FFFFFF;
+  scrollbar-width: thin;
+}
+
+.list-task-backlog-without-user,
+.list-task-backlog,
+.list-task-ready,
+.list-task-progress,
+.list-task-finished {
+  width: 235px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  padding: 6px;
+  word-wrap: break-word;
+  margin: 9px 0;
+}
+
+.button-deleteTask {
+  width: 246px;
+  border-radius: 5px;
+  padding: 6px;
+  margin: 9px 0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-by-id {
+  /* position: relative; */
+  position: relative;
+  display: inline-block;
+  width: 50px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 246px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.p-dropdown {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 246px;
+}
+
+.p-backlog-user{
+  width: 246px;
+}
+
+.deleteImg {
+  width: 25px;
+  height: 25px;
+}
+
+.tasks-from-backlog,
+.tasks-from-ready,
+.tasks-from-progress,
+.tasks-from-finished {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.tasks-from-backlog:hover,
+.tasks-from-ready:hover,
+.tasks-from-progress:hover,
+.tasks-from-finished:hover,
+.tasks-delete:hover,
+.user-delete:hover {
+  background-color: #aca8a852;
+  border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-by-id:hover .dropdown-content {
+  display: block;
+  left: -200px;
+}
+
+.title-task {
+  margin: 0 16px;
+}
+
+.active-add:hover {
+  background-color: #87f390;
+  cursor: pointer;
+}
+
+.no-active-add:hover {
+  background-color: #f5818b;
+  cursor: default;
+}
+ 
+
+
+
+
+
+
+
