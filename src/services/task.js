@@ -27,7 +27,6 @@ export const showBacklog = function (document) {
                     const elementLi =  document.createElement("li");
                     elementLi.className = "list-task-backlog";
                     elementLi.draggable = true;
-                    elementLi.contentEditable  = true;
                     elementLi.id = task.id;
                     elementLi.innerHTML = task.description;
                     document.querySelector(".dropdown-task-backlog").appendChild(elementLi);
@@ -54,7 +53,6 @@ export const showBacklog = function (document) {
                 const elementLi =  document.createElement("li");
                 elementLi.className = "list-task-backlog";
                 elementLi.draggable = true;
-                elementLi.contentEditable = true;
                 elementLi.id = task.id;
                 elementLi.innerHTML = task.description;
                 document.querySelector(".dropdown-task-backlog").appendChild(elementLi);
@@ -81,7 +79,7 @@ export const showBacklog = function (document) {
     
         for (const task of Task.getListTaskForBackLog()) {
             isHasTask = true;
-            document.querySelector(".dropdown-task-backlog").innerHTML += '<li class="list-task-backlog" draggable="true" id="' + task.id + '" draggable="true" contenteditable="true">' + task.description + '</li>';
+            document.querySelector(".dropdown-task-backlog").innerHTML += '<li class="list-task-backlog" draggable="true" id="' + task.id + '" draggable="true">' + task.description + '</li>';
             document.querySelector(".dropdown-content-backlog").innerHTML += '<li class="tasks-from-backlog" id="' + task.id + '">' + task.description + '</li>';
             document.querySelector(".delete-content-id-backlog-" + user.id + "").innerHTML += '<li class="tasks-delete button-deleteTask" id="' + task.id + '">' + deleteItemImg + task.description + '</li>';
         }
@@ -112,7 +110,7 @@ export const showReady = function (document) {
                 if (user.id == task.idUser) {
                     countTask++;
                     isHasTask = true;
-                    document.querySelector(".dropdown-task-ready").innerHTML += '<li class="list-task-ready" id="' + task.id + '" draggable="true" contenteditable="true">' + task.description + '</li> ';
+                    document.querySelector(".dropdown-task-ready").innerHTML += '<li class="list-task-ready" id="' + task.id + '" draggable="true" >' + task.description + '</li> ';
                     document.querySelector(".dropdown-content-ready").innerHTML += '<li class="tasks-from-ready" id="' + task.id + '">' + task.description + ' (' + user.login + ')' + '</li>';
                     document.querySelector(".delete-content-id-ready-" + user.id + "").innerHTML += '<li class="tasks-delete button-deleteTask" id="' + task.id + '">' + deleteItemImg + task.description + ' (' + user.login + ')' + '</li>';
                 }
@@ -138,7 +136,7 @@ export const showReady = function (document) {
     
         for (const task of Task.getListTaskForReady()) {
             isHasTask = true;
-            document.querySelector(".dropdown-task-ready").innerHTML += '<li class="list-task-ready" id="' + task.id + '" draggable="true" contenteditable="true">' + task.description + '</li>';
+            document.querySelector(".dropdown-task-ready").innerHTML += '<li class="list-task-ready" id="' + task.id + '" draggable="true" >' + task.description + '</li>';
             document.querySelector(".dropdown-content-ready").innerHTML += '<li class="tasks-from-ready" id="' + task.id + '">' + task.description + '</li>';
             document.querySelector(".delete-content-id-ready-" + user.id + "").innerHTML += '<li class="tasks-delete button-deleteTask" id="' + task.id + '">' + deleteItemImg + task.description + '</li>';
         }
@@ -181,7 +179,7 @@ export const showInProgress = function (document) {
                 if (user.id == task.idUser) {
                     countTask++;
                     isHasTask = true;
-                    document.querySelector(".dropdown-task-progress").innerHTML += '<li class="list-task-progress" id="' + task.id + '" draggable="true" contenteditable="true">' + task.description + '</li> ';
+                    document.querySelector(".dropdown-task-progress").innerHTML += '<li class="list-task-progress" id="' + task.id + '" draggable="true" >' + task.description + '</li> ';
                     document.querySelector(".dropdown-content-progress").innerHTML += '<li class="tasks-from-progress" id="' + task.id + '">' + task.description + ' (' + user.login + ')' + '</li>';
                     document.querySelector(".delete-content-id-progress-" + user.id + "").innerHTML += '<li class="tasks-delete button-deleteTask" id="' + task.id + '">' + deleteItemImg + task.description + ' (' + user.login + ')' + '</li>';
                 }
@@ -207,7 +205,7 @@ export const showInProgress = function (document) {
     
         for (const task of Task.getListTaskForProgress()) {
             isHasTask = true;
-            document.querySelector(".dropdown-task-progress").innerHTML += '<li class="list-task-progress" id="' + task.id + '" draggable="true" contenteditable="true">' + task.description + '</li>';
+            document.querySelector(".dropdown-task-progress").innerHTML += '<li class="list-task-progress" id="' + task.id + '" draggable="true" >' + task.description + '</li>';
             document.querySelector(".dropdown-content-progress").innerHTML += '<li class="tasks-from-progress" id="' + task.id + '">' + task.description + '</li>';
             document.querySelector(".delete-content-id-progress-" + user.id + "").innerHTML += '<li class="tasks-delete button-deleteTask" id="' + task.id + '">' + deleteItemImg + task.description + '</li>';
         }
@@ -247,7 +245,7 @@ export const showFinished = function (document) {
             for (const task of Task.getListTaskForFinished()) {
                 if (user.id == task.idUser) {
                     countTask++;
-                    document.querySelector(".dropdown-task-finished").innerHTML += '<li class="list-task-finished" id="' + task.id + '" draggable="true"  contenteditable="true">' + task.description + '</li> ';
+                    document.querySelector(".dropdown-task-finished").innerHTML += '<li class="list-task-finished" id="' + task.id + '" draggable="true"  >' + task.description + '</li> ';
                     document.querySelector(".delete-content-id-finished-" + user.id + "").innerHTML += '<li class="tasks-delete button-deleteTask" id="' + task.id + '">' + deleteItemImg + task.description + ' (' + user.login + ')' + '</li>';
                 }
             }
@@ -265,7 +263,7 @@ export const showFinished = function (document) {
     document.querySelector(".dropdown-task-finished").innerHTML += '<div class="p-dropdown"><p id="' +user.id+ '" class="p-backlog-user p-backlog-user-1"></p>' + btnDeleteTask + '</div>';
     
         for (const task of Task.getListTaskForFinished()) {
-            document.querySelector(".dropdown-task-finished").innerHTML += '<li class="list-task-finished" id="' + task.id + '" draggable="true" contenteditable="true">' + task.description + '</li>';
+            document.querySelector(".dropdown-task-finished").innerHTML += '<li class="list-task-finished" id="' + task.id + '" draggable="true" >' + task.description + '</li>';
             document.querySelector(".delete-content-id-finished-" + user.id + "").innerHTML += '<li class="tasks-delete button-deleteTask" id="' + task.id + '">' + deleteItemImg + task.description + '</li>';
         }
     }
@@ -296,6 +294,9 @@ export const showAll = function (document) {
     onDelete(document);
     onDragAndDrop(document);
     fillLenghtInFooter(document);
+    document.querySelectorAll('li[draggable="true"]').forEach(element => {
+        element.addEventListener("dblclick", (event) => {element.contentEditable = true;})
+    });
 };
 
 function fillLenghtInFooter(document) {

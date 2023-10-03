@@ -30,7 +30,7 @@ export const deleteToStorage = function (obj, key) {
 };
 
 export const generateTestUser = function (User) {
-  // localStorage.clear();
+  localStorage.clear();
   const adminUser = new User("admin", "admin", Role.R_ADMIN);
   if (!User.isHasThisUser(adminUser)) {
     User.save(adminUser);
